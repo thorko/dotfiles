@@ -49,3 +49,10 @@ fi
 
 alias getsalt="rsync -alvz thorko.de:/opt/salt/ /opt/salt"
 alias pushsalt="rsync -alvz /opt/salt/ thorko.de:/opt/salt"
+
+alias ai="sudo apt-get install"
+alias as="apt-cache search"
+
+function reminder() {
+  echo notify-send -t 10 "$1" | at now + $2
+}
