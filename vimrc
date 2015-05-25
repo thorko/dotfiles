@@ -1,4 +1,4 @@
-colorscheme slate
+colorscheme koehler
 syntax on
 set tabstop=2
 set softtabstop=2
