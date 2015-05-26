@@ -44,7 +44,7 @@ fi
 
 
 # mint-fortune
-/usr/bin/mint-fortune
+# /usr/bin/mint-fortune
 
 
 alias getsalt="rsync -alvz thorko.de:/opt/salt/ /opt/salt"
@@ -52,7 +52,11 @@ alias pushsalt="rsync -alvz /opt/salt/ thorko.de:/opt/salt"
 
 alias ai="sudo apt-get install"
 alias as="apt-cache search"
-alias shit="sudo $(history -p \!\!)"
+#alias shit="sudo $(history -p \!\!)"
+
+alias cfe="cd /home/thorstek/SVN/cfe3/masterfiles/inputs"
+
+alias memoryusage="ps -e -orss=,args= | sort -b -k1,1n | pr -TW$COLUMNS"
 
 function reminder() {
   echo notify-send -t 10 "$1" | at now + $2
