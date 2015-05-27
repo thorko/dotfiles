@@ -59,6 +59,8 @@ alias jump="ssh x204.adm.denic.de"
 
 alias cfe="cd /home/thorstek/SVN/cfe3/masterfiles/inputs"
 
+alias ls="ls --color"
+
 alias memoryusage="ps -e -orss=,args= | sort -b -k1,1n | pr -TW$COLUMNS"
 
 function reminder() {
@@ -66,5 +68,5 @@ function reminder() {
 }
 
 function hwdb() {
-  ssh x204.adm.denic.de "hwdb ip | grep \$1"
+  ssh x204.adm.denic.de "hwdb ip | grep $1"
 }
