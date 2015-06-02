@@ -63,10 +63,6 @@ alias ls="ls --color"
 
 alias memoryusage="ps -e -orss=,args= | sort -b -k1,1n | pr -TW$COLUMNS"
 
-function reminder() {
-  echo notify-send -t 10 "$1" | at now + $2
-}
-
 function hwdb() {
   ssh x204.adm.denic.de "hwdb ip | grep $1"
 }
