@@ -1,6 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+source ~/.bashrc.local
 
 # Source global definitions
 if [ -f /etc/bash.bashrc ]; then
@@ -52,17 +53,7 @@ alias pushsalt="rsync -alvz /opt/salt/ thorko.de:/opt/salt"
 
 alias ai="sudo apt-get install"
 alias as="apt-cache search"
-#alias shit="sudo $(history -p \!\!)"
-
-alias jump="ssh x204.adm.denic.de"
-
-
-alias cfe="cd /home/thorstek/SVN/cfe3/masterfiles/inputs"
+alias shit='sudo "$BASH" -c "$(history -p !!)"'
 
 alias ls="ls --color"
-
 alias memoryusage="ps -e -orss=,args= | sort -b -k1,1n | pr -TW$COLUMNS"
-
-function hwdb() {
-  ssh x204.adm.denic.de "hwdb ip | grep $1"
-}
